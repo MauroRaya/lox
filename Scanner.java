@@ -194,6 +194,9 @@ public class Scanner {
     private void identifier() {
         while (isAlphanumeric(peek())) advance();
 
+        String text = source.substring(start, current);
+        TokenType type = keywords.get(text);
+        if (type == null) type = TokenType.IDENTIFIER;
         addToken(TokenType.IDENTIFIER);
     }
 
