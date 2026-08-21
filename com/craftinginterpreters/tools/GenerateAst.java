@@ -1,4 +1,4 @@
-package tools;
+package com.craftinginterpreters.tools;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -28,6 +28,8 @@ public class GenerateAst {
     ) throws FileNotFoundException, UnsupportedEncodingException {
         String path = outputDir + "/" + baseName + ".java";
         PrintWriter writer = new PrintWriter(path, "UTF-8");
+
+        writer.println("package com.craftinginterpreters.lox;");
 
         writer.println("abstract class " + baseName + " {");
 

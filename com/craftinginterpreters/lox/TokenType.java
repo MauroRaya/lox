@@ -1,3 +1,5 @@
+package com.craftinginterpreters.lox;
+
 public enum TokenType {
     LEFT_PAREN,
     RIGHT_PAREN,
